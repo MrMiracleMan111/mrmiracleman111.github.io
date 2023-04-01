@@ -9,7 +9,7 @@ const container = document.querySelector('#scene-container');
 const scene = new THREE.Scene();
 
 // Set the background color
-scene.background = new Color('skyblue');
+scene.background = new THREE.Color('skyblue');
 
 // Create a camera
 const fov = 35; // AKA Field of View
