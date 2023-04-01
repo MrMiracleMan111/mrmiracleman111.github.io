@@ -6,7 +6,7 @@ import * as THREE from "three";
 const container = document.querySelector('#scene-container');
 
 // create a Scene
-const scene = new Scene();
+const scene = new THREE.Scene();
 
 // Set the background color
 scene.background = new Color('skyblue');
@@ -17,26 +17,26 @@ const aspect = container.clientWidth / container.clientHeight;
 const near = 0.1; // the near clipping plane
 const far = 100; // the far clipping plane
 
-const camera = new PerspectiveCamera(fov, aspect, near, far);
+const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 
 // every object is initially created at ( 0, 0, 0 )
 // move the camera back so we can view the scene
 camera.position.set(0, 0, 10);
 
 // create a geometry
-const geometry = new BoxBufferGeometry(2, 2, 2);
+const geometry = new THREE.BoxBufferGeometry(2, 2, 2);
 
 // create a default (white) Basic material
-const material = new MeshBasicMaterial();
+const material = new THREE.MeshBasicMaterial();
 
 // create a Mesh containing the geometry and material
-const cube = new Mesh(geometry, material);
+const cube = new THREE.Mesh(geometry, material);
 
 // add the mesh to the scene
 scene.add(cube);
 
 // create the renderer
-const renderer = new WebGLRenderer();
+const renderer = new THREE.WebGLRenderer();
 
 // next, set the renderer to the same size as our container element
 renderer.setSize(container.clientWidth, container.clientHeight);
