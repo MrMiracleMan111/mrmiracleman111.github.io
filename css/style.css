@@ -1,3 +1,76 @@
+@font-face {
+    font-family: 'Abyss';
+    src: url('../fonts/Fagostudio-Abysstypeface/Abyss.otf');
+}
+
+/**
+Pink Green Palette
+
+green   rose pink  pink   eggplant   cerise   Whiteish
+#9ebc9e, #ffcfd2, #ffafc5, #553e4e, #e0479e  whitesmoke
+
+**/
+
+/**
+Orange Blue Palette
+
+ Licorice  blue    yellow   pumpkin   dark purple
+#171219, #225560, #edf060, #f0803c, #310d20
+**/
+
+
+/**
+    Orange Dark Palette
+
+#454545 Dark Gret
+#FF6000 Orange Heavy
+#FFA559 Light Orange
+#FFE6C7 Very Light Orange
+**/
+:root {
+    --primary-color: rgb(255, 175, 197);
+    --primary-color-rgb: 255, 175, 197;
+
+    --primary-light-color: rgb(255, 207, 210);
+    --primary-light-color-rgb: 255, 207, 210;
+
+    --primary-dark-color: rgb(85, 62, 78);
+    --primary-dark-color-rgb: 85, 62, 78;
+
+
+    --primary-accent-color: rgb(224, 71, 158);
+    --primary-accent-color-rgb: 224, 71, 158;
+
+    --secondary-color: rgb(158, 188, 158);
+    --secondary-color-rgb: 158, 188, 158;
+    
+    --cursor-width: 5px;
+    --cursor-color: var(--primary-accent-color);
+    
+    --text-color: whitesmoke;
+    --text-color-rgb: 245, 245, 245;
+}
+
+
+@keyframes cursor-blink {
+    0% {
+        border-right-color: transparent;
+    }
+
+    20% {
+        border-right-color: var(--cursor-color);
+    }
+
+    80% {
+        border-right-color: var(--cursor-color);
+    }
+
+    100% {
+        border-right-color: transparent;
+    }
+}
+
+
 /* Set the scroll behavior to smooth so that when you click the in the header, the screen scrolls down rather than jumps */
 html {
     scroll-behavior: smooth;
@@ -6,18 +79,28 @@ html {
 /* Set the margin to 0 to make sure the page stretches all the way to the edge of the browser window. */
 body {
     margin: 0;
+
+    background-color: var(--primary-dark-color);
 }
 
 header, footer {
-    background-color: #ffa500;
+    background-color: var(--primary-color);
     text-align: left;
 }
 
 header {
     font-family: Work Sans;
     color: #fff;
-    min-height: 100vh;
+    min-height: 95vh;
     display: flex;
+
+    background: linear-gradient(0deg, 
+    var(--primary-accent-color) 0% 10%, 
+    var(--primary-color) 10% 20%, 
+    var(--primary-light-color) 20% 100%
+    );
+
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.396));
 }
 
 main {
@@ -33,20 +116,28 @@ main {
 }
 
 h1 {
-    font-family: Poppins;
+    font-family: 'Abyss';
     font-size: calc(1em + 3vw);
-    padding-bottom: .67em;
-    border-bottom: 1px solid;
+    padding-bottom: calc((1em + 3vw) * 0.67);
     line-height: 1.3;
 }
 
+.banner-letter {
+    font-family: 'Abyss';
+    font-size: calc(1em + 3vw);
+    line-height: 1.3;
+
+    color: var(--primary-accent-color);
+    filter: drop-shadow(0px 5px 0px rgba(var(--primary-color-rgb), 0.99));
+}
+
 h2 {
-  font-family: Poppins;
+  font-family: 'Abyss';
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.3px;
   text-align: left;
-  color: #ffa500;
+  color: var(--primary-color);
   padding: 10px 0px 10px 10px;
 }
 
@@ -64,7 +155,9 @@ img {
 }
 
 .bio {
-  color: #ffffff;
+  border-top: 1px solid;
+  padding-top: 50px;
+  color: var(--text-color);
   font-size: 24px;
   font-family: 'Work Sans';
 }
@@ -77,9 +170,9 @@ img {
 
 .myButton {
     border-radius: 28px;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--text-color);
     cursor: pointer;
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 20px;
     padding: 16px 31px;
     text-decoration: none;
@@ -98,6 +191,8 @@ img {
 .recipe {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
   width: 100%;
+
+  background-color: rgba(var(--primary-light-color-rgb), 0.2);
 }
 
 .a {
@@ -117,12 +212,12 @@ img {
 
 .mins {
   display: inline-block;
-  font-family: Poppins;
+  font-family: 'Abyss';
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.3px;
   text-align: left;
-  color: #4a4a4a;
+  color: var(--text-color);
   position: relative;
   bottom: 5px;
 }
@@ -134,9 +229,15 @@ img {
   line-height: 1.29;
   letter-spacing: 0.1px;
   text-align: left;
-  color: #4a4a4a;
+  color: var(--text-color);
   padding: 10px 0px 10px 10px;
-  border-top: 1px solid #4a4a4a;
+  border-top: 1px solid var(--text-color);
+}
+
+.description a {
+    color: var(--primary-accent-color);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .logo {
@@ -162,3 +263,29 @@ footer {
     }
   }
 
+.banner-line {
+    width: fit-content;
+}
+
+.banner-letter {
+    box-sizing: border-box;
+    display: inline-block;
+    white-space: pre;
+}
+
+/*
+    Cursor class
+*/
+.cursor {
+    border-color: var(--cursor-color);
+    border-width: 0px;
+    border-right-width: var(--cursor-width);
+    border-style: solid;
+}
+
+/*
+    Blinking Cursor
+*/
+.cursor-blink {
+    animation: cursor-blink 1s linear 0s infinite normal none;
+}
