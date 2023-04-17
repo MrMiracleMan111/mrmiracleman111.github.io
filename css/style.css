@@ -3,7 +3,9 @@
     src: url('../fonts/Fagostudio-Abysstypeface/Abyss.otf');
 }
 
-
+/**
+    Pop up animation for fruit emojis
+**/
 @keyframes emoji-popup {
     0% {
         transform: scale(0);
