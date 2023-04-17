@@ -225,6 +225,8 @@ async function handleAnimations(animations) {
 const line = document.getElementsByClassName("banner-line");
 
 async function main() {
+    await delay(0.5)
+
     typeMessage("\nJackson Medina", 0, line);
     setCursor(14, line);
 
