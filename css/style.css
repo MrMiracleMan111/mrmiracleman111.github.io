@@ -20,6 +20,30 @@
     }
 }
 
+@keyframes bob-animation {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: -5px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+
+@keyframes end-bob-animation {
+    from {
+        
+    }
+    to {
+        top: 0px;
+    }
+}
+
 /**
 Pink Green Palette
 
@@ -360,6 +384,19 @@ img {
     font-weight: bold;
 }
 
+.link-letter {
+    position: relative;
+    white-space: pre;
+}
+
+.hover-wave {
+    animation-name: bob-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
 .logo {
   width: 115px;
   height: 21.1px;
@@ -411,5 +448,5 @@ footer {
     Blinking Cursor
 */
 .cursor-blink {
-    animation: cursor-blink 1s linear 0s infinite normal none;
+    animation: cursor-blink 2s linear 0s infinite normal none;
 }
