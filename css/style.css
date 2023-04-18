@@ -448,5 +448,5 @@ footer {
     Blinking Cursor
 */
 .cursor-blink {
-    animation: cursor-blink 2s linear 0s infinite normal none;
+    animation: cursor-blink 1.5s linear 0s infinite normal none;
 }
