@@ -305,14 +305,19 @@ img {
   background-color: rgba(var(--primary-light-color-rgb), 0.2);
 }
 
-.recipe img {
-    transition-property: transform;
-    transition-duration: 0.75s;
-    filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.285));
+.recipe .zoom-hover {
+    overflow: hidden;
 }
 
 .recipe:hover .zoom-hover img {
     transform: scale(1.2);
+
+    filter: blur(2px);
+}
+
+.recipe .zoom-hover img {
+    transition-property: transform, filter;
+    transition-duration: 0.75s, 0.75s;
 }
 
 .recipe h2 {
@@ -351,6 +356,12 @@ img {
   padding-top: 10px;
   width: 20px;
   height: auto;
+}
+
+.recipe .material-symbols-outlined {
+    vertical-align: text-top;
+    position: absolute;
+    left: 2%;
 }
 
 .mins {
@@ -411,11 +422,6 @@ img {
 
 footer {
   margin-top: 44px;
-}
-
-
-.zoom-hover {
-    overflow: hidden;
 }
 
 @media all and (max-width:700px) {
