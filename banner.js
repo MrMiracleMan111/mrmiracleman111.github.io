@@ -230,7 +230,7 @@ async function main() {
     typeMessage("\nJackson Medina", 0, line);
     setCursor(14, line);
 
-    await delay(2.5);
+    await delay(2.0);
 
     deleteMessage(15, 0, line);
     typeMessage("\nCoder", 0, line);
