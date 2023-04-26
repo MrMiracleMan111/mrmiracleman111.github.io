@@ -10,12 +10,15 @@ function makeSVGElement(tag, attrs) {
 function addBubbles(count, layers) {
     const pages = 2;
     // Fill page with bubbles
-    const MAX_HEIGHT = 740;
+    const MAX_HEIGHT = 2220;
     const MAX_WIDTH = 1440;
-    const ANIMATION_TIME = 20;
+    const ANIMATION_TIME = 60;
 
     const MAX_RADIUS = 20;
     const MIN_RADIUS = 10;
+
+    const MAX_Y_RAND = 200;
+    const MAX_X_RAND = 200;
 
     for (let k = 0; k < pages; k++) {
         let page = makeSVGElement("g", {"transform" : `translate(${0}, ${MAX_HEIGHT})`});
@@ -55,8 +58,8 @@ function addBubbles(count, layers) {
     
         for (let j = 0; j < layers; j++) {
             for(let i = 0; i < count; i++) {
-                let start_x = (MAX_WIDTH / count) * (i + 0.5) + (Math.random()-0.5) * 100;
-                let start_y = (MAX_HEIGHT / layers) * (j + 0.5) + (Math.random()-0.5) * 100;
+                let start_x = (MAX_WIDTH / count) * (i + 0.5) + (Math.random()-0.5) * MAX_X_RAND;
+                let start_y = (MAX_HEIGHT / layers) * (j + 0.5) + (Math.random()-0.5) * MAX_Y_RAND;
                 
                 let radius = Math.random()*(MAX_RADIUS - MIN_RADIUS) + MIN_RADIUS;
 
@@ -75,4 +78,4 @@ function addBubbles(count, layers) {
     }
 }
 
-addBubbles(10, 5, 2);
+addBubbles(10, 10, 2);
