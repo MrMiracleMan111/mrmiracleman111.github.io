@@ -3,7 +3,7 @@ async function delay(time) {
     return new Promise((resolve) => {
         setTimeout(resolve, time * 1000);
     });
-}
+};
 
 const TYPE_SPEED = 0.08;
 const DELETE_SPEED = 0.08;
@@ -225,7 +225,7 @@ async function handleAnimations(animations) {
 const line = document.getElementsByClassName("banner-line");
 
 async function main() {
-    await delay(0.25)
+    await delay(0.25);
 
     typeMessage("\nJackson Medina", 0, line);
     setCursor(14, line);
@@ -288,6 +288,4 @@ async function main() {
     moveCursorTo(11, 17, line);
     setCursor(16, line);*/
 }
-
-
 main();

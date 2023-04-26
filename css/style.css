@@ -136,12 +136,15 @@ header {
     font-family: Work Sans;
     color: #fff;
     display: flex;
+    background-color: var(--primary-light-color);
 
+    /*
     background: linear-gradient(0deg, 
     var(--primary-accent-color) 0% 10%, 
     var(--primary-color) 10% 20%, 
     var(--primary-light-color) 20% 100%
     );
+    */
 
     filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.396));
 
@@ -215,6 +218,7 @@ img {
     max-width: 1150px;
     margin: auto;
     padding: 10vh;
+    height: 90vh;
     display: block;
 
     margin-bottom: 0;
@@ -317,6 +321,7 @@ img {
 
 .recipe .zoom-hover img {
     transition-property: transform, filter;
+    transition-timing-function: ease-in-out;
     transition-duration: 0.75s, 0.75s;
 }
 
@@ -326,6 +331,7 @@ img {
     letter-spacing: 0.3em;
     margin: 0;
     padding-left: 15%;
+    
     background: linear-gradient(-45deg, 
     var(--primary-light-color) 0% 5%,
     var(--primary-accent-color) 5% 10%,
@@ -376,6 +382,13 @@ img {
   bottom: 5px;
 }
 
+
+.container {
+    /*min-width: 500px;*/
+    margin: auto;
+  }
+  
+
 .description {
   font-family: Work Sans;
   font-size: 14px;
@@ -415,9 +428,34 @@ img {
   padding: 20px;
 }
 
-.container {
-  /*min-width: 500px;*/
-  margin: auto;
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-style: solid;
+    object-fit: cover;
+}
+
+.wave-a {
+    border-bottom-width: 5vh;
+    border-color: var(--primary-color);
+}
+
+.wave-a path {
+    fill: var(--primary-color);
+}
+.wave-a circle {
+    fill: var(--primary-color);
+}
+
+.wave-b {
+    border-bottom-width: 0vh;
+    border-color: var(--primary-accent-color);
+}
+
+.wave-b path {
+    fill: var(--primary-accent-color);
 }
 
 footer {

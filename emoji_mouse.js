@@ -37,7 +37,7 @@ const MIN_DIST = 50;
 
 let last_pos = null;
 
-$(".banner").mousemove(function(event) {
+$("header").mousemove(function(event) {
     let pos = {x: event.pageX, y: event.pageY};
     if (last_pos == null) {
         last_pos = pos;
