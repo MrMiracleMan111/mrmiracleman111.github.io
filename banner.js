@@ -216,6 +216,7 @@ async function handleAnimations(animations) {
             case "DeleteMessage":
                 await handleDeleteMessage(animation.startIndex, animation.endIndex, animation.line);
         }
+        
 
         animations.splice(0, 1);
     }

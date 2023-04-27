@@ -65,10 +65,10 @@ function addBubbles(count, layers) {
 
                 let blob = makeSVGElement("circle", 
                 {
-                    "fill" : "FF0066",
+                    "fill" : "#FF0066",
                     "cx" : start_x,
                     "cy" : start_y,
-                    "r" : radius
+                    "r" : radius,
                 });
     
                 page.append(blob);

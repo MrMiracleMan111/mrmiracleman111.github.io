@@ -428,7 +428,7 @@ img {
 .wave-a path {
     fill: var(--primary-color);
 }
-.wave-a circle {
+.wave-a ellipse, .wave-a circle {
     fill: var(--primary-color);
 }
 
