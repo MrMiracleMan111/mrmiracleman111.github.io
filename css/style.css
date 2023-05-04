@@ -125,8 +125,29 @@ html {
 /* Set the margin to 0 to make sure the page stretches all the way to the edge of the browser window. */
 body {
     margin: 0;
-
     background-color: var(--primary-dark-color);
+}
+
+/* Enable overlay scrollbar */
+@supports(overflow-y: overlay) {
+    body {
+        overflow-y: overlay;
+    }
+
+    html::-webkit-scrollbar {
+        width: 12px;
+        background-color: #00000000;
+    }
+    
+    html::-webkit-scrollbar-track {
+        background-color: #00000000;
+    }
+    
+    html::-webkit-scrollbar-thumb {
+        background-color: #0000009b;
+    }
+    
+
 }
 
 header, footer {
